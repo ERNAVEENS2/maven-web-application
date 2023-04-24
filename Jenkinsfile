@@ -20,7 +20,7 @@ stages{
   steps{
 	  sshagent(['tomcat_server']){
        
-    sh 'ssh -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.2.151.179:/opt/apache-tomcat-9.0.73/webapps/"
+    sh "ssh -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.2.151.179:/home/ec2-user/apache-tomcat-9.0.73/webapps"
    }
    }
    }
