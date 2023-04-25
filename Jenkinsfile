@@ -18,9 +18,9 @@ stages{
   }
   stage('DeployAppIntoTomcat'){
   steps{
-	sshagent(['tomcat_server']){
+	sshagent(['tomcat']) {
        
-    sh "ssh -o StrictHostKeyChecking=no **/target/maven-web-application.war ec2-user@65.2.151.179:/home/ec2-user/apache-tomcat-9.0.73/webapps" 
+    sh "ssh -o StrictHostKeyChecking=no /target/maven-web-application.war ec2-user@ip-172-31-33-36:/home/ec2-user/apache-tomcat-9.0.73/webapps/" 
 	}
    }
    }
