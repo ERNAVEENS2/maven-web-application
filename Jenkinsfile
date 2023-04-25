@@ -18,10 +18,10 @@ stages{
   }
   stage('DeployAppIntoTomcat'){
   steps{
-	  deploy contextPath: '/home/ec2-user/apache-tomcat-9.0.73/webapps', war: '/home/ec2-user/java_application/workspace/maven-web-application/target/maven-web-application.war'
-	/*  sshagent(['tomcat_server']){
+	sshagent(['tomcat_server']){
        
-    sh "ssh -o StrictHostKeyChecking=no **/target/maven-web-application.war ec2-user@65.2.151.179:/home/ec2-user/apache-tomcat-9.0.73/webapps"  } */
+    sh "ssh -o StrictHostKeyChecking=no **/target/maven-web-application.war ec2-user@65.2.151.179:/home/ec2-user/apache-tomcat-9.0.73/webapps" 
+	}
    }
    }
   }
