@@ -20,7 +20,7 @@ stages{
   steps{
 	sshagent(['tomcat']) {
        
-    sh "scp **/target/maven-web-application.war ec2-user@172.31.33.36:/home/ec2-user/apache-tomcat-9.0.73/webapps" 
+    sh "scp /home/ec2-user/java_application/workspace/maven-web-application/target/maven-web-application.war ec2-user@172.31.33.36:/home/ec2-user/apache-tomcat-9.0.73/webapps"
 	}
    }
    }
